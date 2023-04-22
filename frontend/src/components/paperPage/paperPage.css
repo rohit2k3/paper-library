@@ -1,0 +1,88 @@
+body{
+    background-color: #ced4da;
+}
+
+.year-qa {
+    color: white;
+    background-color: #FFC93C;
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.8rem;
+    width: fit-content;
+}
+
+.section-qa {
+    color: white;
+    background-color: #3cff87;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    box-shadow: 0 1px 3px rgb(0 0 0/12%), 0 1px 2px rgb(0 0 0/24%) !important;
+}
+
+
+.card-container-paper-page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+.unit-container {
+    margin: 1rem 0rem;
+}
+
+.centre-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.select-field {
+    text-align: center;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.select-legend {
+    background-color: black;
+    color: white;
+    padding: 0.3rem;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.custom-year-range-picker {
+    border-radius: 20px;
+}
+
+.custom-year-range-picker .yrp-picker-box {
+    border-radius: 20px;
+    background-color: #1890ff;
+    color: #fff;
+}
+
+.custom-year-range-picker .yrp-picker-box span {
+    color: #fff;
+}
+
+.custom-year-range-picker .yrp-picker-box i {
+    border-color: #fff;
+}
+
+@media screen and (max-width:820px) {
+    .card-container-paper-page {
+        width: 98%;
+    }
+    .section-qa{
+        padding: 0.5rem 1rem;
+    }
+    .year-qa{
+        padding: 0.5rem 1rem;
+    }
+}

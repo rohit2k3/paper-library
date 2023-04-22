@@ -1,0 +1,13 @@
+.profile-div{
+    font-size: 1.3rem;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem 0.5rem;
+    transition: all 0.5s;
+    text-align: center;
+    margin: 1rem auto;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.8rem;
+}

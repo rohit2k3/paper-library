@@ -1,0 +1,140 @@
+nav {
+    display: grid;
+    grid-template-areas: "logo navblocks cartIcon";
+    grid-template-columns: 1fr 20fr 1fr;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    z-index: 100;
+}
+
+a {
+    text-decoration: none;
+    /* font-weight: 500; */
+    color: black;
+}
+
+.logo {
+    grid-area: logo;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+
+.menuclose {
+    display: none;
+}
+
+.navbtns {
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    transition: all 0.3s;
+}
+
+.desktop-btn {
+    grid-area: navblocks;
+    display: flex;
+    /* background-color: blueviolet; */
+    align-items: center;
+    justify-content: end;
+    z-index: 10;
+}
+
+.loginbtn {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.loginbtn:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 0px 2px black inset;
+}
+
+.navbtns:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 2px 0px 0px black inset;
+}
+
+.cart-icon {
+    margin: 0rem 2rem;
+    grid-area: cartIcon;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    font-size: 1.5rem;
+}
+.cartNum{
+    position: absolute;
+    top: 7px;
+    right: 2px;
+    font-size: 1rem;
+    
+}
+
+.hamburgerMenu {
+    display: none;
+}
+
+@media screen and (max-width:820px) {
+    nav {
+        grid-template-areas: "menu logo cartIcon";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .hamburgerMenu {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+    }
+    .logo{
+        justify-content: center;
+        height: 2rem;
+    }
+    .cartNum{
+        position: absolute;
+        top: 0px;
+        right: 2px;
+        font-size: 1rem;
+        
+    }
+
+    .desktop-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        transition: all 0.5s;
+        background-color: white;
+        transform: translateY(-1000px);
+
+    }
+
+    .mob-menu-open {
+        transform: translateY(0px);
+    }
+
+    .mob-menu-close {
+        transform: translateY(-1000px);
+    }
+
+    .menuclose {
+        font-size: 2rem;
+        display: block;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+}

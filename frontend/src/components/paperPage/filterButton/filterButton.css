@@ -1,0 +1,15 @@
+.active{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    margin: 0.2rem;
+    padding: 0.3rem;
+    border-radius: 2rem;
+}
+
+.filter-button{
+    border: 1px solid black;
+    margin: 0.2rem;
+    padding: 0.3rem;
+    border-radius: 2rem;
+}

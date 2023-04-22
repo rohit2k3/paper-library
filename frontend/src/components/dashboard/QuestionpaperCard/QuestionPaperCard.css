@@ -1,0 +1,35 @@
+.question-paper-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.8rem;
+    box-shadow: 0 1px 3px rgb(0 0 0/12%), 0 1px 2px rgb(0 0 0/24%) !important;
+
+}
+
+.create-answer-div{
+    width: 90%;
+}
+
+.qa-title{
+    text-align: center;
+}
+
+.submit-btn{
+    background-color: black;
+    color: white;
+    transition: 0.5s all;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+}
+.submit-btn:hover{
+    
+    background-color: white;
+    color: black;
+
+}

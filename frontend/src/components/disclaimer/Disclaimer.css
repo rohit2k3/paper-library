@@ -1,0 +1,33 @@
+.disclaimer-content {
+    width: 80%;
+    /* height: 70vh; */
+    border-radius: 0 200px 200px 0;
+    background-color: #0081C9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 3rem 0rem;
+    color: white;
+}
+
+.disclaimer-content h2 {
+    color: white;
+    padding: 0.5rem;
+    /* font: 400 3rem "Roboro"; */
+    border-bottom: 2px solid white;
+    text-transform: uppercase;
+}
+.disclaimer-content p {
+    margin: 1rem;
+}
+
+/* @media screen and (max-width:820px) { 
+    .disclaimer-content{
+        width: 80%;
+    }
+    /* .disclaimer-content p {
+        width: 90%;
+    } 
+} */

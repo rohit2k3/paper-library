@@ -1,0 +1,37 @@
+.Loader-div{
+    height: 100vh;
+    width: 100vh;
+    text-align: center;
+}
+
+.loader1 , .loader2, .loader3 , .loader4 {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: #ccc;
+    top: 45%;
+    border-radius: 50%;
+  }
+  
+.loader1 {
+    background-color: #FF5460;
+    animation: move 2s infinite cubic-bezier(.2,.64,.81,.23);
+  }
+  .loader2 {
+    background-color: #FF9D84;
+    animation: move 2s 150ms infinite cubic-bezier(.2,.64,.81,.23);
+  }
+  .loader3 {
+    background-color: #F0E797;
+    animation: move 2s 300ms infinite cubic-bezier(.2,.64,.81,.23);
+  }
+  .loader4 {
+    background-color: #75B08A;
+    animation: move 2s 450ms infinite cubic-bezier(.2,.64,.81,.23);
+  }
+  
+  
+  @keyframes move {
+    0% {left: 0%;}
+    100% {left:100%;}
+  }

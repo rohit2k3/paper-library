@@ -1,0 +1,54 @@
+.section-name {
+    color: white;
+    background-color: #3cff87;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: fit-content;
+    text-align: center;
+    margin: 1rem;
+}
+
+.main-conatiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-container{
+    width: 90%;
+    border: 2px solid #3cff87;
+    background-color: #0081C9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.legend-question-num{
+    color: white;
+    background-color:  #5BC0F8;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: fit-content;
+    margin: 1rem;
+}
+.select-option{
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 2rem;
+    padding: 0.2rem;
+    margin: 0.5rem;
+}
