@@ -13,18 +13,6 @@ const paperSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  batchYear: {
-    type: Number,
-    required: true,
-  },
-  semester: {
-    type: Number,
-    required: true,
-  },
-  branch: {
-    type: String,
-    required: true,
-  },
   section_A: [
     {
       unit: {
