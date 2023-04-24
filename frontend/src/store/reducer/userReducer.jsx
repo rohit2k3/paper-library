@@ -5,10 +5,10 @@ export const loginReducer = createReducer(
   { user: [], isAuthenticated: false ,message:""},
   {
     LOGIN_REQUEST: (state, action) => {
-      (state.loading = true), (state.isAuthenticated = false);
+      (state.loading = true)
     },
     REGSISTER_REQUEST: (state, action) => {
-      (state.loading = true), (state.isAuthenticated = false);
+      (state.loading = true)
     },
     LOGOUT_REQUEST: (state, action) => {
       state.loading = true;
@@ -29,6 +29,7 @@ export const loginReducer = createReducer(
         (state.message = action.payload.message);
     },
     LOAD_SUCCESS: (state, action) => {
+      (state.isAuthenticated = true),
       (state.loading = false),
       (state.message = action.payload.message),
       (state.user = action.payload.data);

@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MdMenuOpen } from "react-icons/md";
 import { CgClose } from "react-icons/cg";
 import logo from "../../assets/logo.png";
-import { useSelector } from "react-redux";
-const Header = () => {
-  const isAuthenticated = useSelector((state) => state.user.isAuthenticated);
+const Header = ({isAuthenticated }) => {
 
   const [isOpen, setisOpen] = useState(false);
 
@@ -43,7 +41,7 @@ const Header = () => {
         <Link onClick={handleMenu} className="navbtns" to={"/disclaimer"}>
           Disclaimer
         </Link>
-        <Link onClick={handleMenu} className="loginbtn" to={"/loginSignup"}>
+        <Link onClick={handleMenu}  className="loginbtn" to={"/loginSignup"}>
           {isAuthenticated ? "Dashboard" : "Login"}
         </Link>
         {isAuthenticated ? <Link onClick={handleMenu} className="loginbtn" to={"/logout"}>

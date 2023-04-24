@@ -7,13 +7,7 @@ import {
   paperUpdateReducer,
 } from "./reducer/dataReducer";
 import { loginReducer } from "./reducer/userReducer";
-import storage from "redux-persist/lib/storage";
-import { persistReducer, persistStore } from "redux-persist";
 
-const persistConfig = {
-  key: "root",
-  storage,
-};
 
 const rootReducer = combineReducers({ 
   homeData: homeReducer,
@@ -24,14 +18,10 @@ const rootReducer = combineReducers({
   updatePaper:paperUpdateReducer
 })
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-// export const server = "https://paper-answer-backend.onrender.com";
-// export const server = "http://localhost:5000";
-export const server = "";
+export const server = "http://localhost:5000";
 
 export const store = configureStore({
-  reducer: persistedReducer
+  reducer: rootReducer
 });
 
-export const persistor = persistStore(store)

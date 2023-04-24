@@ -15,31 +15,69 @@ import Footer from "./components/footer/Footer";
 import Disclaimer from "./components/disclaimer/Disclaimer";
 import Contact from "./components/Contact/Contact";
 import About from "./components/About/About";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { clearErrors, LoadUser } from "./store/action/userAction";
+import { useDispatch } from "react-redux";
+import { enqueueSnackbar } from "notistack";
+import Loader from "./components/Loader/Loader";
 function App() {
+  const { isAuthenticated ,loading , error, message , user } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+
+
+  useEffect(() => {
+    if (error) {
+      enqueueSnackbar(error, { variant: "error" });
+      dispatch(clearErrors());
+    }
+
+    if (message) {
+      enqueueSnackbar(message, { variant: "success" });
+      dispatch(clearErrors());
+    }
+  }, [dispatch, error, message]);
+
+  useEffect(() => {
+    dispatch(LoadUser());
+  }, [dispatch]);
+
   return (
     <div>
       <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/loginSignup" element={<LoginSignup />} />
-          <Route path="/logout" element={<Logout />} />
-          <Route path="dashboard/edit/:branchShort/:subCode/:year/:id" element={<PaperEdit />} />
-          <Route path="/:id/:branchShort" element={<SubjectPage />} />
-          <Route path="/dashboard/:id/:branchShort" element={<SubjectPage />} />
-          <Route path="/dashboard/:id/:branchShort/:subCode" element={<PaperDashboard />} />
-          <Route path="/dashboard/:id/:branchShort/:subCode/create" element={<Create />} />
-          <Route path="/disclaimer" element={<Disclaimer/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="/about" element={<About/>}/>
-
-          <Route
-            path="/:id/:branchShort/:subCode"
-            element={<PaperPage />}
-          />
-          <Route path="/dashboard" Component={Dashboard} />
-        </Routes>
-        <Footer/>
+        <Header isAuthenticated={isAuthenticated}/>
+        {loading ? (
+          <Loader />
+        ) : (
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/loginSignup" element={<LoginSignup />} />
+            <Route path="/logout" element={<Logout />} />
+            <Route
+              path="dashboard/edit/:branchShort/:subCode/:year/:id"
+              element={<PaperEdit />}
+            />
+            <Route path="/:id/:branchShort" element={<SubjectPage />} />
+            <Route
+              path="/dashboard/:id/:branchShort"
+              element={<SubjectPage />}
+            />
+            <Route
+              path="/dashboard/:id/:branchShort/:subCode"
+              element={<PaperDashboard />}
+            />
+            <Route
+              path="/dashboard/:id/:branchShort/:subCode/create"
+              element={<Create />}
+            />
+            <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/:id/:branchShort/:subCode" element={<PaperPage />} />
+            <Route path="/dashboard" element={<Dashboard isAuthenticated={isAuthenticated} user={user}/>} />
+          </Routes>
+        )}
+        <Footer />
       </Router>
     </div>
   );

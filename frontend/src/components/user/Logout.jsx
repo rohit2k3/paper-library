@@ -8,22 +8,25 @@ import { clearErrors } from "../../store/action/userAction";
 const Logout = () => {
   const dispatch = useDispatch();
   const navigateTo = useNavigate();
-  const { isAuthenticated ,error , message} = useSelector((state) => state.user);
-
+  const { isAuthenticated, error, message } = useSelector(
+    (state) => state.user
+  );
+  
+  
   useEffect(() => {
     if (!isAuthenticated) {
       navigateTo("/loginSignup");
     }
     if (error) {
       enqueueSnackbar(error, { variant: "error" });
-      dispatch(clearErrors)
+      dispatch(clearErrors());
     }
     if (message) {
       enqueueSnackbar(message, { variant: "success" });
-      dispatch(clearErrors)
+      dispatch(clearErrors());
     }
     dispatch(userLogout());
-  }, [error, dispatch, message, isAuthenticated]);
+  }, [message, error, dispatch]);
 
   return <div>Logout Success</div>;
 };
