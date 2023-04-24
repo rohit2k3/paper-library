@@ -1,4 +1,4 @@
-# Paper_library_MERN_APP
+# Paper-library
 Full Stack Previous Year Paper Library with filter option
 
 
