@@ -11,6 +11,10 @@
 
 }
 
+ol{
+    list-style-position: inside;
+}
+
 .create-answer-div{
     width: 90%;
 }
