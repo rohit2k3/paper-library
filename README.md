@@ -1,5 +1,5 @@
 # Paper-library
-Full Stack Previous Year Paper Library with filter option
+Full Stack Previous Year Paper Library is a MERN (MongoDB, Express, React, and Node.js) application that allows users to access and filter previous year papers for various academic units.
 
 
 [Visit Now](https://rohit2k3.github.io/paper-library/) 🚀
