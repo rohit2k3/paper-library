@@ -19,7 +19,8 @@ const rootReducer = combineReducers({
 })
 
 
-export const server = "http://localhost:5000";
+// export const server = "http://localhost:5000";
+export const server = "https://paper-library-f17bb1556628.herokuapp.com";
 
 export const store = configureStore({
   reducer: rootReducer
